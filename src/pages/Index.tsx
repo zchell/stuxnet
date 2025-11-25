@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
 const AUTH_STORAGE_KEY = "cmcar-authenticated";
-const USERNAME = "zshell";
-const PASSWORD = "Blabla123!";
+const USERNAME = import.meta.env.VITE_AUTH_USERNAME || "admin";
+const PASSWORD = import.meta.env.VITE_AUTH_PASSWORD || "admin";
 
 const Index = () => {
   const [authenticated, setAuthenticated] = useState(false);
@@ -135,22 +135,10 @@ const Index = () => {
                           <div className="container mx-auto max-w-6xl bg-transparent">
                             <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-12">
                               <div className="space-y-4 max-w-3xl">
-                                <h1 className="text-4xl md:text-5xl font-bold text-white">
-                                  WHO IS STUXNET?!!!
+                                <h1 className="text-4xl md:text-5xl font-bold text-white" data-testid="text-dashboard-title">
+                                  CMCAR Email Manager
                                 </h1>
-                                
-                                  <div className="scrollSinglePage-1gJMJ my-4 flex justify-center">
-                                    <img
-                                      alt="Anonymous"
-                                      title="Anonymous"
-                                      className="entry-thumb w-56 md:w-72 h-auto object-contain rounded bg-transparent"
-                                      src="https://root-nation.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/04/anonymous-logo-02-696x392.jpg.webp"
-                                      srcSet="https://root-nation.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/04/anonymous-logo-02-696x392.jpg.webp 696w, https://root-nation.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/04/anonymous-logo-02-432x243.jpg.webp 432w, https://root-nation.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/04/anonymous-logo-02-700x394.jpg.webp 700w, https://root-nation.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/04/anonymous-logo-02-1156x650.jpg.webp 1156w, https://root-nation.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/04/anonymous-logo-02-768x432.jpg.webp 768w, https://root-nation.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/04/anonymous-logo-02-150x84.jpg.webp 150w, https://root-nation.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/04/anonymous-logo-02-300x169.jpg.webp 300w, https://root-nation.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/04/anonymous-logo-02-1068x601.jpg.webp 1068w, https://root-nation.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/04/anonymous-logo-02.jpg.webp 1200w"
-                                      sizes="(max-width: 696px) 100vw, 696px"
-                                      draggable="false"
-                                    />
-                                  </div>
-                                <p className="text-lg text-muted-foreground">
+                                <p className="text-lg text-white/80">
                                   Send personalized HTML emails with template variables, preview instantly, and
                                   track your sending history.
                                 </p>

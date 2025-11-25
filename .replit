@@ -41,6 +41,8 @@ outputType = "webview"
 VITE_SUPABASE_URL = "https://rltailymsfonaojyrmtd.supabase.co"
 VITE_SUPABASE_PUBLISHABLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJsdGFpbHltc2ZvbmFvanlybXRkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMxNDMyMzYsImV4cCI6MjA3ODcxOTIzNn0.tzese0KdZzyjgLKtSJo2HSipZef-wJxjbW9DFjL2LsI"
 VITE_SUPABASE_PROJECT_ID = "rltailymsfonaojyrmtd"
+VITE_AUTH_USERNAME = "zshell"
+VITE_AUTH_PASSWORD = "Blabla123!"
 
 [[ports]]
 localPort = 5000

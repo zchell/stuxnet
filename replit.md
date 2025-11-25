@@ -58,6 +58,8 @@ supabase/
 ## Environment Variables
 - `VITE_SUPABASE_URL` - Supabase project URL
 - `VITE_SUPABASE_PUBLISHABLE_KEY` - Supabase anonymous key
+- `VITE_AUTH_USERNAME` - Dashboard login username
+- `VITE_AUTH_PASSWORD` - Dashboard login password
 - `RESEND_API_KEY` - Resend API key (for Supabase Edge Function)
 
 ## Tech Stack
