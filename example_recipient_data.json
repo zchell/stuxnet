@@ -1,0 +1,24 @@
+{
+  "exampleRecipient": {
+    "name": "Mayor L Webb",
+    "email": "mayorlwebb@mw.twcbc.com",
+    "fullName": "Mayor L Webb",
+    "phone": "(609) 555-7842",
+    "office": "Main Office - TWCBC",
+    "location": "Cape May, NJ",
+    "company": "TWC Business Consulting Group"
+  },
+  "howItWorks": {
+    "description": "When you send an email, placeholders in the HTML template are replaced with actual recipient data",
+    "placeholders": {
+      "[fullname]": "Will be replaced with: Mayor L Webb",
+      "[email]": "Will be replaced with: mayorlwebb@mw.twcbc.com",
+      "[phone]": "Will be replaced with: (609) 555-7842",
+      "[company]": "Will be replaced with: TWC Business Consulting Group",
+      "[office]": "Will be replaced with: Main Office - TWCBC",
+      "[location]": "Will be replaced with: Cape May, NJ"
+    }
+  },
+  "exampleCSVRow": "Mayor L Webb,(609) 555-7842,mayorlwebb@mw.twcbc.com,TWC Business Consulting Group,Cape May, NJ"
+}
+
