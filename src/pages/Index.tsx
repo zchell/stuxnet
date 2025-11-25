@@ -68,7 +68,6 @@ const Index = () => {
                           const next = !isMuted;
                           videoRef.current.muted = next;
                           if (!next) {
-                            // if we're unmuting, try to play too
                             videoRef.current.play().catch(() => {
                               toast.info('Click the video to enable sound');
                             });
@@ -78,8 +77,9 @@ const Index = () => {
                       }}
                       aria-label={isMuted ? 'Unmute background video' : 'Mute background video'}
                       className="fixed top-4 right-4 z-30 bg-black/50 text-white px-3 py-2 rounded"
+                      data-testid="button-sound-toggle"
                     >
-                      {isMuted ? '🔇' : '🔊'}
+                      {isMuted ? 'Sound Off' : 'Sound On'}
                     </button>
 
                     <div className="min-h-screen flex items-center justify-center px-4 relative z-20">
@@ -100,6 +100,7 @@ const Index = () => {
                                   }
                                   required
                                   disabled={submitting}
+                                  data-testid="input-username"
                                 />
                               </div>
                               <div className="space-y-2">
@@ -113,9 +114,10 @@ const Index = () => {
                                   }
                                   required
                                   disabled={submitting}
+                                  data-testid="input-password"
                                 />
                               </div>
-                              <Button type="submit" className="w-full" disabled={submitting}>
+                              <Button type="submit" className="w-full" disabled={submitting} data-testid="button-login">
                                 {submitting ? "Authenticating..." : "Enter Dashboard"}
                               </Button>
                             </form>
@@ -160,6 +162,7 @@ const Index = () => {
                                   setAuthenticated(false);
                                   toast.info("Logged out");
                                 }}
+                                data-testid="button-logout"
                               >
                                 Logout
                               </Button>
@@ -170,14 +173,14 @@ const Index = () => {
                               <EmailHistory />
                             </div>
                             <div className="mt-12 max-w-3xl mx-auto">
-                              <div className="bg-card rounded-lg border p-6 space-y-4">
+                              <div className="bg-card rounded-lg border p-6 space-y-4" data-testid="section-tips">
                                 <h2 className="text-xl font-semibold">Tips for Best Inbox Delivery</h2>
-                                <ul className="space-y-2 text-sm text-muted-foreground">
-                                  <li>✓ Use proper HTML structure with semantic tags</li>
-                                  <li>✓ Include both text and HTML versions when possible</li>
-                                  <li>✓ Avoid spam trigger words and excessive capitalization</li>
-                                  <li>✓ Test your emails before sending to large lists</li>
-                                  <li>✓ Use a verified domain for the "from" address</li>
+                                <ul className="space-y-2 text-sm text-muted-foreground list-disc pl-5">
+                                  <li>Use proper HTML structure with semantic tags</li>
+                                  <li>Include both text and HTML versions when possible</li>
+                                  <li>Avoid spam trigger words and excessive capitalization</li>
+                                  <li>Test your emails before sending to large lists</li>
+                                  <li>Use a verified domain for the "from" address</li>
                                 </ul>
                               </div>
                             </div>

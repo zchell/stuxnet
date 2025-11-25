@@ -881,7 +881,7 @@ Mayor L Webb,(609) 555-7842,mayorlwebb@mw.twcbc.com,TWC Business Consulting Grou
                   min={1}
                   step={0.5}
                   value={deliverySettings.delaySeconds}
-                  onChange={(e) => setDeliverySettings({ ...deliverySettings, delaySeconds: e.target.value })}
+                  onChange={(e) => setDeliverySettings({ ...deliverySettings, delaySeconds: Number(e.target.value) || 1 })}
                   disabled={loading}
                 />
                 <p className="text-xs text-muted-foreground">Default: 5 seconds</p>
@@ -894,7 +894,7 @@ Mayor L Webb,(609) 555-7842,mayorlwebb@mw.twcbc.com,TWC Business Consulting Grou
                   min={0}
                   step={0.5}
                   value={deliverySettings.randomizeSeconds}
-                  onChange={(e) => setDeliverySettings({ ...deliverySettings, randomizeSeconds: e.target.value })}
+                  onChange={(e) => setDeliverySettings({ ...deliverySettings, randomizeSeconds: Number(e.target.value) || 0 })}
                   disabled={loading}
                 />
                 <p className="text-xs text-muted-foreground">Adds natural pauses (default 2s)</p>

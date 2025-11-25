@@ -6,9 +6,10 @@ expertMode = true
 channel = "stable-25_05"
 
 [deployment]
-deploymentTarget = "autoscale"
+deploymentTarget = "static"
 run = ["npm", "run", "start"]
 build = ["npm", "run", "build"]
+publicDir = "dist"
 
 [workflows]
 runButton = "Project"
@@ -30,3 +31,25 @@ author = "agent"
 task = "shell.exec"
 args = "npm run dev"
 waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[userenv]
+
+[userenv.shared]
+VITE_SUPABASE_URL = "https://rltailymsfonaojyrmtd.supabase.co"
+VITE_SUPABASE_PUBLISHABLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJsdGFpbHltc2ZvbmFvanlybXRkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMxNDMyMzYsImV4cCI6MjA3ODcxOTIzNn0.tzese0KdZzyjgLKtSJo2HSipZef-wJxjbW9DFjL2LsI"
+VITE_SUPABASE_PROJECT_ID = "rltailymsfonaojyrmtd"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
+localPort = 8080
+externalPort = 80
+
+[[ports]]
+localPort = 43573
+externalPort = 3000

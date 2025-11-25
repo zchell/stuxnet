@@ -14,6 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
+      companies: {
+        Row: {
+          id: string
+          created_at: string
+          updated_at: string
+          company_name: string
+          full_name: string
+          phone: string | null
+          email: string
+          office: string | null
+          location: string | null
+        }
+        Insert: {
+          id?: string
+          created_at?: string
+          updated_at?: string
+          company_name: string
+          full_name: string
+          phone?: string | null
+          email: string
+          office?: string | null
+          location?: string | null
+        }
+        Update: {
+          id?: string
+          created_at?: string
+          updated_at?: string
+          company_name?: string
+          full_name?: string
+          phone?: string | null
+          email?: string
+          office?: string | null
+          location?: string | null
+        }
+        Relationships: []
+      }
       email_history: {
         Row: {
           created_at: string
