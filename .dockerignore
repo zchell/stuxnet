@@ -1,0 +1,15 @@
+.git
+.gitignore
+node_modules
+npm-debug.log
+.env
+.DS_Store
+.railwayrc.json
+*.swp
+*.swo
+*~
+.next
+.vercel
+dist
+build
+*.log
